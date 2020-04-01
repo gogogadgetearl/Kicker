@@ -16,7 +16,7 @@ class App extends Component {
     }
     size() {
         //return 200/this.state.height*1.2+15;
-        return 250 / this.cv().foot + 10;
+        return 490/170;
     }
     cv() {
         const height = this.state.height;
@@ -56,7 +56,7 @@ class App extends Component {
             <div className='central'>
 
               <div className="experiments"  style={printStyles}>
-                <svg viewBox={"0 0 500 500"} height='500' width="100%" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox={"0 0 500 500"} height='500' width="500" preserveAspectRatio="xMidYMid meet">
                   <rect width={foot} height={height} style={rectStyles} />
                   <line id="newHeight" x1="0" y1="0" x2="0" y2={height} strokeWidth="8" stroke="blue"/>
                   <line id="newFoot" x1="0" y1="0" x2={foot} y2="0" strokeWidth="8" stroke="purple"/>
