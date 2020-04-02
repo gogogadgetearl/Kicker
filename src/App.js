@@ -5,7 +5,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            height: 8,
+            height: 9,
             angle: 45
         };
     }
@@ -16,7 +16,7 @@ class App extends Component {
     }
     size() {
         //return 200/this.state.height*1.2+15;
-        return 490/170;
+        return 490/82;
     }
     cv() {
         const height = this.state.height;
@@ -56,10 +56,10 @@ class App extends Component {
             <div className='central'>
 
               <div className="experiments"  style={printStyles}>
-                <svg viewBox={"0 0 500 500"} height='500' width="500" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox={`-${250-(foot/2)} -2 500 500`} height='500' width="500" preserveAspectRatio="xMidYMid meet">
                   <rect width={foot} height={height} style={rectStyles} />
-                  <line id="newHeight" x1="0" y1="0" x2="0" y2={height} strokeWidth="8" stroke="blue"/>
-                  <line id="newFoot" x1="0" y1="0" x2={foot} y2="0" strokeWidth="8" stroke="purple"/>
+                  <line id="newHeight" x1="0" y1="0" x2="0" y2={height} strokeWidth="4" stroke="blue"/>
+                  <line id="newFoot" x1="0" y1="0" x2={foot} y2="0" strokeWidth="4" stroke="purple"/>
                   <path d={"M" + foot + "," + radius + " v-" + radius + " A" + radius + "," + radius + " 0 0,0 0," + height + " z"} fill="white" stroke="black" strokeWidth="3"/>
                   <line id="newLength" x1="0" y1={height} x2={foot} y2="0" strokeWidth="2" stroke="green"/>
                   <line id="redRadius" x1={foot} y1="0" x2={foot} y2={radius} stroke="orange" strokeWidth="3"/>
@@ -83,7 +83,7 @@ class App extends Component {
 
               <div className="inputs" style={heightStyle}>
                 <span className="numbers">HEIGHT</span>
-                <input  name="height" type="range" min="6" max="48" step="0.125" onChange={this.handleChange.bind(this)} value={this.state.height}/>
+                <input  name="height" type="range" min="3" max="24" step="0.125" onChange={this.handleChange.bind(this)} value={this.state.height}/>
                 <span className="numbers">{this.state.height}"</span>
               </div>
 
